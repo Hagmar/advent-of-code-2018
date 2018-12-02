@@ -1,0 +1,1 @@
+print(__import__('functools').reduce(lambda x,y: x*y, __import__('functools').reduce(lambda s,l: (s[0] + 1 if 2 in __import__('collections').Counter(l).values() else s[0], s[1] + 1 if 3 in __import__('collections').Counter(l).values() else s[1]), __import__('sys').stdin.readlines(), (0, 0))))
