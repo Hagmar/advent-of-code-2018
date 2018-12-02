@@ -1,21 +1,13 @@
 import sys
 from collections import Counter
 
-lines = sys.stdin.readlines()
-
 two = 0
 three = 0
-for line in lines:
+for line in sys.stdin.readlines():
     c = Counter(line)
-    ptwo = False
-    pthree = False
-    for k,v in c.items():
-        if v == 2:
-            ptwo = True
-        if v == 3:
-            pthree = True
-    if ptwo:
+    counts = set(c.values())
+    if 2 in counts:
         two += 1
-    if pthree:
+    if 3 in counts:
         three += 1
 print(two*three)
