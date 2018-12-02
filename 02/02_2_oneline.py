@@ -1,0 +1,1 @@
+print(next(filter(lambda x:x[0]==1,map(lambda x:__import__('functools').reduce(lambda s,c:(s[0]+c[0],s[1]+c[1] if not c[0] else s[1]),map(lambda t:(1,0) if t[0]!=t[1] else (0,t[0]),zip(x[0],x[1])),(0,'')),__import__('itertools').combinations(__import__('sys').stdin.readlines(),2))))[1].strip())
