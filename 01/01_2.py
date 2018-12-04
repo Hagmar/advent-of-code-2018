@@ -4,8 +4,7 @@ import itertools
 found = set()
 n = 0
 for l in itertools.cycle(sys.stdin.readlines()):
-    x = int(l)
-    n += x
+    n += int(l)
     if n in found:
         print(n)
         break
